@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "384444584488",
+    "project_id": "sattam-ai-d6209",
+    "storage_bucket": "sattam-ai-d6209.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:384444584488:android:9e8f3b6d1c7032d60b9b1d",
+        "android_client_info": {
+          "package_name": "com.sattam.ai"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqS_C7XSNLmOWyxnsp6tJSIJC10JeblnA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:384444584488:android:63fd02ffac57b7850b9b1d",
+        "android_client_info": {
+          "package_name": "com.sattam.ai.sattam_ai"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqS_C7XSNLmOWyxnsp6tJSIJC10JeblnA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
