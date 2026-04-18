@@ -35,6 +35,7 @@ class ScrapeResponse(BaseModel):
 
 @router.post("/seed-20", response_model=Seed20Response)
 async def seed_20():
+    """Scrapes LiveLaw and inserts exactly 20 new cases into MongoDB."""
     try:
         results = await seed_20_cases()
         inserted = results["inserted"]
@@ -42,7 +43,7 @@ async def seed_20():
         if inserted == 0:
             raise HTTPException(
                 status_code=404,
-                detail="No new articles found. All recent articles are already in the DB."
+                detail="No new articles found. All recent LiveLaw articles are already in the DB."
             )
 
         return Seed20Response(
@@ -54,7 +55,7 @@ async def seed_20():
             message=(
                 f"✅ {inserted} new cases added to the feed."
                 if inserted == 20
-                else f"⚠️ Only {inserted}/20 inserted — not enough new articles right now."
+                else f"⚠️ Only {inserted}/20 inserted — not enough new articles on LiveLaw right now."
             ),
         )
     except HTTPException:
@@ -66,6 +67,7 @@ async def seed_20():
 
 @router.post("/scrape", response_model=ScrapeResponse)
 async def trigger_scrape():
+    """Scrapes all available new articles from LiveLaw with no cap."""
     try:
         results = await scrape_livelaw()
         return ScrapeResponse(
